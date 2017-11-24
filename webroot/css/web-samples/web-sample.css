@@ -1,0 +1,26 @@
+.title-template{
+    text-align: center !important;
+    font-size: 34px !important;
+}
+.semi-footer{
+    height: 45px;
+    text-align: center;
+    padding-top: 24px;
+    font-size: 16px;
+    color: white;
+}
+.first-footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.content-footer{
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    line-height:54px;
+}
+.footer-sample{
+    background-color: #101AF7;
+}
