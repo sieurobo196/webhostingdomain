@@ -157,7 +157,7 @@ $this->layout = false;
             <div class="agile_inner_breadcrumb">
                 <ul class="w3_short">
                     <li><a href="<?php echo $this->Url->build(["controller" => "webSamples", "action" => "luxury_homes_real_estates"]); ?>">Home</a><i>>></i></li>
-                    <li>About Us</li>
+                    <li><?php echo $titleMenu?></li>
                 </ul>
             </div>
         </div>

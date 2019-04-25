@@ -63,18 +63,52 @@ class WebSamplesController extends AppController {
                 ),
                 'template_3' => array(
                     'id' => 7,
-                    'name' => 'Grand Villa a Real Estates',
-                    'action' => 'grand_villa_real_estates',
-                    'title' => 'Grand Villa a Real Estates Category Bootstrap Responsive Web Template',
-                    'image' => 'grand_villa_real_estates.jpg',
+                    'name' => 'Apartment a Real Estates',
+                    'action' => 'apartment_real_estates',
+                    'title' => 'Apartment a Real Estates Category Bootstrap Responsive Web Template',
+                    'image' => 'apartment_real_estates.jpg',
                     'alt' => 'Template',
                 ),
                 'template_4' => array(
                     'id' => 8,
-                    'name' => 'Build Estates',
-                    'action' => 'build_estate_real_estates',
-                    'title' => 'Build Estates a Real Estates Category Bootstrap Responsive Web Template',
-                    'image' => 'veg.jpg',
+                    'name' => 'Assets A Real Estates',
+                    'action' => 'assets_real_estates',
+                    'title' => 'Assets a Real Estates Category Bootstrap Responsive Web Template',
+                    'image' => 'assets_real_estates.jpg',
+                    'alt' => 'Template',
+                ),
+            ),
+            2 => array(
+                'template_1' => array(
+                    'id' => 5,
+                    'name' => 'Manor a Real Estates',
+                    'action' => 'manor_real_estates',
+                    'title' => 'Manor a Real Estates Category Bootstrap Responsive Web Template',
+                    'image' => 'manor_real_estates.jpg',
+                    'alt' => 'Template',
+                ),
+                'template_2' => array(
+                    'id' => 6,
+                    'name' => 'Pro Property a Real Estates',
+                    'action' => 'pro_property_real_estates',
+                    'title' => 'Pro Property a Real Estates Category Bootstrap Responsive Web Template',
+                    'image' => 'pro_property_real_estates.jpg',
+                    'alt' => 'Template',
+                ),
+                'template_3' => array(
+                    'id' => 7,
+                    'name' => 'Real Homes a Real Estates',
+                    'action' => 'real_homes_real_estates',
+                    'title' => 'Real Homes a Real Estates Category Bootstrap Responsive Web Template',
+                    'image' => 'real_homes_real_estates.jpg',
+                    'alt' => 'Template',
+                ),
+                'template_4' => array(
+                    'id' => 8,
+                    'name' => 'Township a Real Estates',
+                    'action' => 'township_real_estates',
+                    'title' => 'Township a Real Estates Category Bootstrap Responsive Web Template',
+                    'image' => 'township_real_estates.jpg',
                     'alt' => 'Template',
                 ),
             ),
@@ -101,6 +135,19 @@ class WebSamplesController extends AppController {
         $this->set('activeBanner', $activeBanner);
         $this->set('activeDivIndex', $activeDivIndex);
         $this->set('activeDivPage', $activeDivPage);
+        $titleMenu = '';
+        if ($page == 'about') {
+            $titleMenu = "About Us";
+        } else if ($page == 'codes') {
+            $titleMenu = "Short Codes";
+        } else if ($page == 'contact') {
+            $titleMenu = "Mail Us";
+        } else if ($page == 'gallery') {
+            $titleMenu = "Gallery";
+        } else if ($page == "icons") {
+            $titleMenu = "Icons";
+        }
+        $this->set("titleMenu", $titleMenu);
     }
 
     public function grandVillaRealEstates($page = null) {
@@ -116,15 +163,20 @@ class WebSamplesController extends AppController {
     public function prefabRealEstates($page = null) {
         $activeMenu = $page == null ? 'index' : $page;
         $this->set('activeMenu', $activeMenu);
+        $activeDivPage = $page == null ? '' : "show-page";
+        $activeDivIndex = $page == null ? 'show-index' : "";
+        $this->set('activeDivPage', $activeDivPage);
+        $this->set('activeDivIndex', $activeDivIndex);
     }
 
     public function factualVillaRealEstates($page = null) {
         $activeMenu = $page == null ? 'index' : $page;
-        $activeBanner = $page == null ? 'banner' : "banner-2";
-        $activeDivHeader = $page == null ? 'show-index' : "show-page";
         $this->set('activeMenu', $activeMenu);
-        $this->set('activeBanner', $activeBanner);
-        $this->set('activeDivHeader', $activeDivHeader);
+    }
+
+    public function apartmentRealEstates($page = null) {
+        $activeMenu = $page == null ? 'index' : $page;
+        $this->set('activeMenu', $activeMenu);
     }
 
 }
